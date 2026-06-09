@@ -2,18 +2,18 @@
   "schemaVersion": 1,
   "generatedAt": "2026-06-09T19:53:03.136Z",
   "item": {
-    "id": "eds-roi-1970",
-    "slug": "eds-roi-1970",
+    "id": "eds-roi-1966",
+    "slug": "eds-roi-1966",
     "type": "map",
-    "title": "District Electoral Divisions/Wards 1970",
-    "subtitle": "1970",
+    "title": "District Electoral Divisions/Wards 1966",
+    "subtitle": "1966",
     "categoryId": "wards",
     "category": "Electoral Areas",
     "group": "Elections and Government",
-    "description": "Republic of Ireland District Electoral Divisions/Wards as at 5 January 1970, assembled from Connacht 1919, Leinster 1957, Munster 1970, and the unchanged Ulster ROI DED component. The source notes describe this as the final pre-15 April 1971 layout, before major Dublin, Cork, and Limerick ward/DED reforms.",
-    "date": "1970-01-05",
+    "description": "Republic of Ireland District Electoral Divisions/Wards as at 1 April 1966, assembled from Connacht 1919, Leinster 1957, Munster 1966, and the unchanged Ulster ROI DED component. The source notes describe this as a modified version of the 1970 boundaries before Waterford's five wards were replaced with twenty-four new wards.",
+    "date": "1966-04-01",
     "years": [
-      1970
+      1966
     ],
     "provider": [
       "Phelim Birch",
@@ -24,7 +24,7 @@
       "district electoral division",
       "DED",
       "ward",
-      "1970",
+      "1966",
       "republic of ireland",
       "historic",
       "small electoral units"
@@ -49,7 +49,7 @@
         "title": "Leinster"
       },
       {
-        "id": "eds-munster-1970",
+        "id": "eds-munster-1966",
         "title": "Munster"
       },
       {
@@ -59,35 +59,12 @@
     ],
     "references": [
       {
-        "label": "District Electoral Divisions/Wards 1970 source notes",
-        "url": "https://data.civgraph.net/data/maps/electoral-divisions/Electoral Divisions 1986-2019/District Electoral Divisions Wards 1970.txt",
+        "label": "District Electoral Divisions/Wards 1966 source notes",
+        "url": "https://data.civgraph.net/data/maps/electoral-divisions/Electoral Divisions 1986-2019/District Electoral Divisions Wards 1966.txt",
         "note": "Sidecar notes supplied in Irish Digitised Boundaries archive."
       },
       {
-        "label": "Minutes of Dublin City Council 1954 Item 144"
-      },
-      {
-        "label": "Dublin City Popular Edition, 1953"
-      },
-      {
-        "label": "Irish Townland and Historical Map Viewer, 6 Inch Last Edition basemap"
-      },
-      {
-        "label": "1958 Geographia Plan of Dublin"
-      },
-      {
-        "label": "1945 Geographia Plan of Dublin"
-      },
-      {
         "label": "Paddy Matthews 1921 Wards/DEDs map"
-      },
-      {
-        "label": "National Archives 1926 census wards/DEDs map"
-      },
-      {
-        "label": "Dublin ward definitions 1954 PDF transcription",
-        "url": "https://data.civgraph.net/data/documents/dublin-electoral-history/Dublin%20Wards%2014-06-1954%20(Minutes%20of%20Dublin%20City%20Council%201954%20Item%20144).pdf",
-        "note": "Named in the 1970 source notes as a Dublin ward source."
       }
     ],
     "downloads": [
@@ -102,8 +79,8 @@
         "type": "FlatGeobuf"
       },
       {
-        "label": "Munster DEDs/Wards 1970",
-        "url": "https://data.civgraph.net/data/maps/electoral-divisions/Electoral Divisions 1986-2019/Wards_DEDs_Munster_1970.fgb",
+        "label": "Munster DEDs/Wards 1966",
+        "url": "https://data.civgraph.net/data/maps/electoral-divisions/Electoral Divisions 1986-2019/Wards_DEDs_Munster_1966.fgb",
         "type": "FlatGeobuf"
       },
       {
@@ -112,27 +89,27 @@
         "type": "FlatGeobuf"
       },
       {
-        "label": "Source notes 1970",
-        "url": "https://data.civgraph.net/data/maps/electoral-divisions/Electoral Divisions 1986-2019/District Electoral Divisions Wards 1970.txt",
+        "label": "Source notes 1966",
+        "url": "https://data.civgraph.net/data/maps/electoral-divisions/Electoral Divisions 1986-2019/District Electoral Divisions Wards 1966.txt",
         "type": "Source notes"
       }
     ],
-    "interactiveUrl": "/#layers=eds-roi-1970",
-    "browseUrl": "/browse/maps/eds-roi-1970",
+    "interactiveUrl": "/#layers=eds-roi-1966",
+    "browseUrl": "/browse/maps/eds-roi-1966",
     "rawMetadata": {
-      "id": "eds-roi-1970",
-      "name": "District Electoral Divisions/Wards 1970",
-      "slug": "eds-roi-1970",
+      "id": "eds-roi-1966",
+      "name": "District Electoral Divisions/Wards 1966",
+      "slug": "eds-roi-1966",
       "category": "wards",
       "isGroup": true,
       "featured": true,
-      "date": "1970-01-05",
+      "date": "1966-04-01",
       "provider": [
         "Phelim Birch",
         "Paddy Matthews"
       ],
       "style": {
-        "color": "#155A2B",
+        "color": "#247D36",
         "weight": 2
       },
       "labelProperty": "ENGLISH",
@@ -154,10 +131,10 @@
           "useLOD": false
         },
         {
-          "id": "eds-munster-1970",
+          "id": "eds-munster-1966",
           "label": "Munster",
           "files": {
-            "fgb": "https://data.civgraph.net/data/maps/electoral-divisions/Electoral Divisions 1986-2019/Wards_DEDs_Munster_1970.fgb"
+            "fgb": "https://data.civgraph.net/data/maps/electoral-divisions/Electoral Divisions 1986-2019/Wards_DEDs_Munster_1966.fgb"
           },
           "useLOD": false
         },
@@ -182,8 +159,8 @@
           "type": "FlatGeobuf"
         },
         {
-          "label": "Munster DEDs/Wards 1970",
-          "url": "https://data.civgraph.net/data/maps/electoral-divisions/Electoral Divisions 1986-2019/Wards_DEDs_Munster_1970.fgb",
+          "label": "Munster DEDs/Wards 1966",
+          "url": "https://data.civgraph.net/data/maps/electoral-divisions/Electoral Divisions 1986-2019/Wards_DEDs_Munster_1966.fgb",
           "type": "FlatGeobuf"
         },
         {
@@ -192,42 +169,19 @@
           "type": "FlatGeobuf"
         },
         {
-          "label": "Source notes 1970",
-          "url": "https://data.civgraph.net/data/maps/electoral-divisions/Electoral Divisions 1986-2019/District Electoral Divisions Wards 1970.txt",
+          "label": "Source notes 1966",
+          "url": "https://data.civgraph.net/data/maps/electoral-divisions/Electoral Divisions 1986-2019/District Electoral Divisions Wards 1966.txt",
           "type": "Source notes"
         }
       ],
       "references": [
         {
-          "label": "District Electoral Divisions/Wards 1970 source notes",
-          "url": "https://data.civgraph.net/data/maps/electoral-divisions/Electoral Divisions 1986-2019/District Electoral Divisions Wards 1970.txt",
+          "label": "District Electoral Divisions/Wards 1966 source notes",
+          "url": "https://data.civgraph.net/data/maps/electoral-divisions/Electoral Divisions 1986-2019/District Electoral Divisions Wards 1966.txt",
           "note": "Sidecar notes supplied in Irish Digitised Boundaries archive."
         },
         {
-          "label": "Minutes of Dublin City Council 1954 Item 144"
-        },
-        {
-          "label": "Dublin City Popular Edition, 1953"
-        },
-        {
-          "label": "Irish Townland and Historical Map Viewer, 6 Inch Last Edition basemap"
-        },
-        {
-          "label": "1958 Geographia Plan of Dublin"
-        },
-        {
-          "label": "1945 Geographia Plan of Dublin"
-        },
-        {
           "label": "Paddy Matthews 1921 Wards/DEDs map"
-        },
-        {
-          "label": "National Archives 1926 census wards/DEDs map"
-        },
-        {
-          "label": "Dublin ward definitions 1954 PDF transcription",
-          "url": "https://data.civgraph.net/data/documents/dublin-electoral-history/Dublin%20Wards%2014-06-1954%20(Minutes%20of%20Dublin%20City%20Council%201954%20Item%20144).pdf",
-          "note": "Named in the 1970 source notes as a Dublin ward source."
         }
       ],
       "keywords": [
@@ -235,7 +189,7 @@
         "district electoral division",
         "DED",
         "ward",
-        "1970",
+        "1966",
         "republic of ireland",
         "historic",
         "small electoral units"
@@ -250,7 +204,7 @@
           -5.4
         ]
       ],
-      "description": "Republic of Ireland District Electoral Divisions/Wards as at 5 January 1970, assembled from Connacht 1919, Leinster 1957, Munster 1970, and the unchanged Ulster ROI DED component. The source notes describe this as the final pre-15 April 1971 layout, before major Dublin, Cork, and Limerick ward/DED reforms."
+      "description": "Republic of Ireland District Electoral Divisions/Wards as at 1 April 1966, assembled from Connacht 1919, Leinster 1957, Munster 1966, and the unchanged Ulster ROI DED component. The source notes describe this as a modified version of the 1970 boundaries before Waterford's five wards were replaced with twenty-four new wards."
     }
   }
 }
