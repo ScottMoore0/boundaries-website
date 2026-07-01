@@ -64,11 +64,18 @@ npx wrangler pages dev . --d1 PRONI_DB=proni-catalogue
 
 ## Notes
 
-- The FTS5 table `proni` searches `ref`, `title`, `dates`; other columns
-  (`slug`, `level`, `parent`, `parent_slug`, `has_children`, `fond`) are
-  `UNINDEXED` and returned for display + linking into the browse hierarchy.
+- Schema: a base table `proni` (with a `UNIQUE(ref)` index) plus an
+  external-content FTS5 table `proni_fts` over `ref`, `title`, `dates`. The base
+  table stores the display/link columns (`slug`, `level`, `parent`,
+  `parent_slug`, `has_children`, `fond`) and backs both the FTS index and the
+  exact-reference lookup. The import ends with
+  `INSERT INTO proni_fts(proni_fts) VALUES('rebuild');` to build the index.
 - Query building (`buildMatch` in the Function): free text is tokenised on
   non-alphanumerics, terms are ANDed, and the final term is a prefix match for
   search-as-you-type. A reference like `BG/1` becomes the terms `bg AND 1`.
+- Exact-reference fast path: any whitespace-free query is also looked up as a
+  literal reference via the unique index (`WHERE ref = UPPER(q)`) and, when it
+  hits, is returned first — so `BG/1` / `D1071` resolve to that exact node ahead
+  of full-text descendants.
 - To refresh after re-scraping, rebuild the SQL and re-import (drop/recreate the
   table or import into a new D1 and re-point the binding).

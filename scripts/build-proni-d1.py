@@ -14,12 +14,19 @@ import sys, os, json, argparse, sqlite3, gzip
 
 def slugify(ref): return ref.replace('/', '~')
 
-DDL = """CREATE VIRTUAL TABLE proni USING fts5(
+DDL = """CREATE TABLE proni (
+  ref TEXT NOT NULL,
+  title TEXT, dates TEXT, slug TEXT, level TEXT,
+  parent TEXT, parent_slug TEXT, has_children INTEGER, fond TEXT
+);
+CREATE UNIQUE INDEX proni_ref ON proni(ref);
+CREATE VIRTUAL TABLE proni_fts USING fts5(
   ref, title, dates,
-  slug UNINDEXED, level UNINDEXED, parent UNINDEXED, parent_slug UNINDEXED,
-  has_children UNINDEXED, fond UNINDEXED,
+  content='proni', content_rowid='rowid',
   prefix='2 3', tokenize='unicode61 remove_diacritics 2'
 );"""
+
+FTS_REBUILD = "INSERT INTO proni_fts(proni_fts) VALUES('rebuild');"
 
 COLS = ['ref', 'title', 'dates', 'slug', 'level', 'parent', 'parent_slug', 'has_children', 'fond']
 
@@ -120,7 +127,10 @@ def main():
     if batch:
         db.executemany(ins, batch)
     flush_sql()
+    # Build the FTS index from the base table (external-content pattern).
+    db.execute(FTS_REBUILD)
     db.commit()
+    sqlf.write(FTS_REBUILD + '\n')
     sqlf.close()
 
     cnt = db.execute('SELECT count(*) FROM proni').fetchone()[0]
