@@ -310,3 +310,7 @@ data/browse/map-features/
 /data/browse/proni.json
 /data/browse/details/proni/
 /data/browse/proni-preview.html
+
+# PRONI search DB build artifacts
+*.sqlite
+/data/browse/proni-d1.sql*

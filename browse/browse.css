@@ -2063,3 +2063,19 @@ a:hover {
 }
 .proni-provenance a { color: var(--color-primary); text-decoration: none; }
 .proni-provenance a:hover { text-decoration: underline; }
+
+/* --- PRONI search box --------------------------------------------------- */
+.proni-search { margin-bottom: 2rem; }
+.proni-search-input {
+  width: 100%; box-sizing: border-box; padding: 0.8rem 1rem;
+  font-size: 1.05rem; color: var(--color-text);
+  border: 1.5px solid var(--color-border); border-radius: var(--radius-md);
+  background: var(--color-surface); transition: border-color .12s, box-shadow .12s;
+}
+.proni-search-input:focus {
+  outline: none; border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 18%, transparent);
+}
+.proni-search-results { margin-top: 1rem; }
+.proni-search-count { font-size: 0.82rem; color: var(--color-text-muted); margin: 0 0 0.6rem; }
+.proni-fonds { margin-top: 1.5rem; }

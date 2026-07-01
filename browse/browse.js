@@ -824,7 +824,7 @@ async function renderProniRoute(id) {
     setHero(config, null);
     els.results.innerHTML = '<div class="browse-loading">Loading PRONI records...</div>';
     const data = await loadIndex('proni');
-    renderList('proni', data.items || []);
+    renderProniLanding(config, data.items || []);
     return;
   }
   els.results.innerHTML = '<div class="browse-loading">Loading record...</div>';
@@ -837,6 +837,85 @@ async function renderProniRoute(id) {
   state.currentDetail = { type: 'proni', item: node.item };
   setHero(config, { title: node.item.title || node.item.ref, description: node.item.dates || '' });
   els.results.innerHTML = renderProniDetailPage(node);
+}
+
+function renderProniLanding(config, items) {
+  els.results.innerHTML = `
+    <section class="proni-search">
+      <input type="search" id="proni-search-input" class="proni-search-input" autocomplete="off"
+             placeholder="Search ${formatNumber(1538177)} PRONI records — title, reference, or dates…"
+             value="${escapeAttr(state.proniQuery || '')}" aria-label="Search PRONI records">
+      <div id="proni-search-results" class="proni-search-results"></div>
+    </section>
+    <section class="proni-fonds">
+      <h2 class="proni-section-title">Browse by collection</h2>
+      <ul class="proni-child-list">
+        ${items.map((it) => `
+          <li class="proni-child proni-child--container">
+            <a href="#/proni/${encodeURIComponent(it.slug)}" data-browse-link>
+              <span class="proni-child-icon" aria-hidden="true">&#128193;</span>
+              <span class="proni-child-main">
+                <span class="proni-child-title">${escapeHtml(it.title || it.id)}</span>
+                <span class="proni-child-meta">${escapeHtml(it.id)}${it.childCount ? `<span class="proni-child-level">${formatNumber(it.childCount)} records</span>` : ''}</span>
+              </span>
+            </a>
+          </li>`).join('')}
+      </ul>
+    </section>`;
+  const input = document.getElementById('proni-search-input');
+  if (input) {
+    input.addEventListener('input', () => scheduleProniSearch(input.value));
+    if ((state.proniQuery || '').trim().length >= 2) runProniSearch(state.proniQuery);
+    input.focus();
+    // place cursor at end
+    const v = input.value; input.value = ''; input.value = v;
+  }
+}
+
+let proniSearchTimer = null;
+function scheduleProniSearch(query) {
+  state.proniQuery = query;
+  clearTimeout(proniSearchTimer);
+  proniSearchTimer = setTimeout(() => runProniSearch(query), 250);
+}
+
+async function runProniSearch(query) {
+  const box = document.getElementById('proni-search-results');
+  if (!box) return;
+  const q = (query || '').trim();
+  if (q.length < 2) { box.innerHTML = ''; return; }
+  box.innerHTML = '<div class="browse-loading">Searching…</div>';
+  try {
+    const resp = await fetch(`/_api/proni/search?q=${encodeURIComponent(q)}&limit=30`);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const data = await resp.json();
+    if ((state.proniQuery || '').trim() !== q) return; // stale response
+    renderProniSearchResults(box, data);
+  } catch (error) {
+    box.innerHTML = '<div class="browse-empty">PRONI search runs on the deployed site (the D1-backed API is not available in this local preview).</div>';
+  }
+}
+
+function renderProniSearchResults(box, data) {
+  const results = data.results || [];
+  if (!results.length) {
+    box.innerHTML = `<div class="browse-empty">No matches for &ldquo;${escapeHtml(data.query || '')}&rdquo;.</div>`;
+    return;
+  }
+  box.innerHTML = `
+    <p class="proni-search-count">${formatNumber(results.length)} result${results.length === 1 ? '' : 's'}</p>
+    <ul class="proni-child-list">
+      ${results.map((r) => `
+        <li class="proni-child proni-child--${r.hasChildren ? 'container' : 'item'}">
+          <a href="#/proni/${encodeURIComponent(r.slug)}" data-browse-link>
+            <span class="proni-child-icon" aria-hidden="true">${r.hasChildren ? '&#128193;' : '&#128196;'}</span>
+            <span class="proni-child-main">
+              <span class="proni-child-title">${escapeHtml(r.title)}</span>
+              <span class="proni-child-meta">${escapeHtml(r.ref)}${r.level ? `<span class="proni-child-level">${escapeHtml(r.level)}</span>` : ''}${r.dates ? `<span class="proni-child-dates">${escapeHtml(r.dates)}</span>` : ''}</span>
+            </span>
+          </a>
+        </li>`).join('')}
+    </ul>`;
 }
 
 function proniBreadcrumb(node) {
