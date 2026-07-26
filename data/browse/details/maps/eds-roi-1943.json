@@ -1,37 +1,38 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-26T23:04:54.593Z",
+  "generatedAt": "2026-07-26T23:01:19.719Z",
   "item": {
-    "id": "eds-roi-1944",
-    "slug": "eds-roi-1944",
+    "id": "eds-roi-1943",
+    "slug": "eds-roi-1943",
     "type": "map",
-    "title": "District Electoral Divisions/Wards 1944",
-    "subtitle": "1944",
-    "categoryId": "electoral-divisions",
-    "category": "Electoral Divisions",
-    "group": "Built Environment",
-    "description": "Republic of Ireland District Electoral Divisions/Wards as at 1944-04-01, assembled from Connacht (= 1919 boundaries), Leinster (= 1943 boundaries), Munster 1944, Ulster (= 1921 boundaries). Modified version of District Electoral Divisions/Wards 1946. In 1946, Dublin county borough’s existing 34 wards were replaced with 33 new wards.",
-    "date": "1944-04-01",
+    "title": "District Electoral Divisions/Wards 1943",
+    "subtitle": "1943",
+    "categoryId": "wards",
+    "category": "Electoral Areas",
+    "group": "Elections and Government",
+    "description": "Republic of Ireland District Electoral Divisions/Wards as at 1943-10-13, assembled from Connacht (= 1919 boundaries), Leinster 1943, Munster (= 1921 boundaries), Ulster (= 1921 boundaries). Modified version of District Electoral Divisions/Wards 1944. In 1944, Waterford county borough’s boundary was expanded into the DEDs of Ballynakill, Kilbarry and Waterford Rural.",
+    "date": "1943-10-13",
     "years": [
-      1944
+      1943
     ],
     "provider": [
       "Phelim Birch",
       "Paddy Matthews"
     ],
     "keywords": [
-      "electoral",
-      "division",
-      "ED",
-      "1944",
-      "Dublin",
-      "placeholder"
+      "electoral division",
+      "district electoral division",
+      "DED",
+      "ward",
+      "1943",
+      "republic of ireland",
+      "historic",
+      "small electoral units"
     ],
-    "status": "not yet converted",
+    "status": "available",
     "featured": true,
     "loadable": true,
     "labelProperty": "ENGLISH",
-    "parentCard": "District Electoral Divisions",
     "thumbnail": {
       "kind": "placeholder",
       "label": "DE",
@@ -39,33 +40,30 @@
     },
     "variants": [
       {
-        "id": "eds-roi-1944-connacht",
+        "id": "eds-roi-1943-connacht",
         "title": "Connacht (= 1919 boundaries)"
       },
       {
-        "id": "eds-roi-1944-leinster",
-        "title": "Leinster (= 1943 boundaries)"
+        "id": "eds-roi-1943-leinster",
+        "title": "District Electoral Divisions/Wards 1943 - Leinster 1943"
       },
       {
-        "id": "eds-roi-1944-munster",
-        "title": "District Electoral Divisions/Wards 1944 - Munster 1944"
+        "id": "eds-roi-1943-munster",
+        "title": "Munster (= 1921 boundaries)"
       },
       {
-        "id": "eds-roi-1944-ulster",
+        "id": "eds-roi-1943-ulster",
         "title": "Ulster (= 1921 boundaries)"
       }
     ],
     "references": [
       {
-        "label": "District Electoral Divisions/Wards 1944 source notes",
-        "url": "https://data.civgraph.net/data/maps/electoral-divisions/District Electoral Divisions Wards 1944.txt",
+        "label": "District Electoral Divisions/Wards 1943 source notes",
+        "url": "https://data.civgraph.net/data/maps/electoral-divisions/District Electoral Divisions Wards 1943.txt",
         "note": "Sidecar notes supplied in the Irish Digitised Boundaries archive."
       },
       {
-        "label": "Minutes of Dublin City Council 1946 (starting at page 120)"
-      },
-      {
-        "label": "1945 Geographia Plan of Dublin"
+        "label": "Local Government and Public Health Provisional Orders Confirmation Act, 1944"
       }
     ],
     "downloads": [
@@ -80,8 +78,8 @@
         "type": "FlatGeobuf"
       },
       {
-        "label": "Munster DEDs/Wards 1944",
-        "url": "https://data.civgraph.net/data/maps/electoral-divisions/Wards_DEDs_Munster_1944.fgb",
+        "label": "Munster DEDs/Wards 1921",
+        "url": "https://data.civgraph.net/data/maps/electoral-divisions/Wards_DEDs_Munster_1921.fgb",
         "type": "FlatGeobuf"
       },
       {
@@ -90,42 +88,33 @@
         "type": "FlatGeobuf"
       },
       {
-        "label": "Source notes 1944",
-        "url": "https://data.civgraph.net/data/maps/electoral-divisions/District Electoral Divisions Wards 1944.txt",
+        "label": "Source notes 1943",
+        "url": "https://data.civgraph.net/data/maps/electoral-divisions/District Electoral Divisions Wards 1943.txt",
         "type": "Source notes"
       }
     ],
-    "interactiveUrl": "/#layers=eds-roi-1944",
-    "browseUrl": "/browse/maps/eds-roi-1944",
+    "interactiveUrl": "/#layers=eds-roi-1943",
+    "browseUrl": "/browse/maps/eds-roi-1943",
     "rawMetadata": {
-      "id": "eds-roi-1944",
-      "name": "District Electoral Divisions/Wards 1944",
-      "slug": "eds-roi-1944",
-      "category": "electoral-divisions",
-      "date": "1944-04-01",
-      "placeholder": true,
+      "id": "eds-roi-1943",
+      "slug": "eds-roi-1943",
+      "category": "wards",
+      "isGroup": true,
       "featured": true,
+      "name": "District Electoral Divisions/Wards 1943",
+      "date": "1943-10-13",
       "provider": [
         "Phelim Birch",
         "Paddy Matthews"
-      ],
-      "keywords": [
-        "electoral",
-        "division",
-        "ED",
-        "1944",
-        "Dublin",
-        "placeholder"
       ],
       "style": {
         "color": "#1B5E20",
         "weight": 2
       },
       "labelProperty": "ENGLISH",
-      "isGroup": true,
       "variants": [
         {
-          "id": "eds-roi-1944-connacht",
+          "id": "eds-roi-1943-connacht",
           "label": "Connacht (= 1919 boundaries)",
           "cloneOf": "eds-connacht-1919",
           "files": {
@@ -139,8 +128,8 @@
           "useLOD": false
         },
         {
-          "id": "eds-roi-1944-leinster",
-          "label": "Leinster (= 1943 boundaries)",
+          "id": "eds-roi-1943-leinster",
+          "label": "Leinster 1943",
           "cloneOf": "eds-leinster-1943",
           "files": {
             "fgb": "https://data.civgraph.net/data/maps/electoral-divisions/Wards_DEDs_Leinster_1943.fgb"
@@ -153,11 +142,11 @@
           "useLOD": false
         },
         {
-          "id": "eds-roi-1944-munster",
-          "label": "Munster 1944",
-          "cloneOf": "eds-munster-1944",
+          "id": "eds-roi-1943-munster",
+          "label": "Munster (= 1921 boundaries)",
+          "cloneOf": "eds-munster-1921",
           "files": {
-            "fgb": "https://data.civgraph.net/data/maps/electoral-divisions/Wards_DEDs_Munster_1944.fgb"
+            "fgb": "https://data.civgraph.net/data/maps/electoral-divisions/Wards_DEDs_Munster_1921.fgb"
           },
           "style": {
             "color": "#1B5E20",
@@ -167,7 +156,7 @@
           "useLOD": false
         },
         {
-          "id": "eds-roi-1944-ulster",
+          "id": "eds-roi-1943-ulster",
           "label": "Ulster (= 1921 boundaries)",
           "cloneOf": "eds-ulster-1986",
           "files": {
@@ -181,8 +170,18 @@
           "useLOD": false
         }
       ],
-      "description": "Republic of Ireland District Electoral Divisions/Wards as at 1944-04-01, assembled from Connacht (= 1919 boundaries), Leinster (= 1943 boundaries), Munster 1944, Ulster (= 1921 boundaries). Modified version of District Electoral Divisions/Wards 1946. In 1946, Dublin county borough’s existing 34 wards were replaced with 33 new wards.",
-      "sourceNotes": "https://data.civgraph.net/data/maps/electoral-divisions/District Electoral Divisions Wards 1944.txt",
+      "description": "Republic of Ireland District Electoral Divisions/Wards as at 1943-10-13, assembled from Connacht (= 1919 boundaries), Leinster 1943, Munster (= 1921 boundaries), Ulster (= 1921 boundaries). Modified version of District Electoral Divisions/Wards 1944. In 1944, Waterford county borough’s boundary was expanded into the DEDs of Ballynakill, Kilbarry and Waterford Rural.",
+      "keywords": [
+        "electoral division",
+        "district electoral division",
+        "DED",
+        "ward",
+        "1943",
+        "republic of ireland",
+        "historic",
+        "small electoral units"
+      ],
+      "sourceNotes": "https://data.civgraph.net/data/maps/electoral-divisions/District Electoral Divisions Wards 1943.txt",
       "downloads": [
         {
           "label": "Connacht DEDs/Wards 1919",
@@ -195,8 +194,8 @@
           "type": "FlatGeobuf"
         },
         {
-          "label": "Munster DEDs/Wards 1944",
-          "url": "https://data.civgraph.net/data/maps/electoral-divisions/Wards_DEDs_Munster_1944.fgb",
+          "label": "Munster DEDs/Wards 1921",
+          "url": "https://data.civgraph.net/data/maps/electoral-divisions/Wards_DEDs_Munster_1921.fgb",
           "type": "FlatGeobuf"
         },
         {
@@ -205,22 +204,19 @@
           "type": "FlatGeobuf"
         },
         {
-          "label": "Source notes 1944",
-          "url": "https://data.civgraph.net/data/maps/electoral-divisions/District Electoral Divisions Wards 1944.txt",
+          "label": "Source notes 1943",
+          "url": "https://data.civgraph.net/data/maps/electoral-divisions/District Electoral Divisions Wards 1943.txt",
           "type": "Source notes"
         }
       ],
       "references": [
         {
-          "label": "District Electoral Divisions/Wards 1944 source notes",
-          "url": "https://data.civgraph.net/data/maps/electoral-divisions/District Electoral Divisions Wards 1944.txt",
+          "label": "District Electoral Divisions/Wards 1943 source notes",
+          "url": "https://data.civgraph.net/data/maps/electoral-divisions/District Electoral Divisions Wards 1943.txt",
           "note": "Sidecar notes supplied in the Irish Digitised Boundaries archive."
         },
         {
-          "label": "Minutes of Dublin City Council 1946 (starting at page 120)"
-        },
-        {
-          "label": "1945 Geographia Plan of Dublin"
+          "label": "Local Government and Public Health Provisional Orders Confirmation Act, 1944"
         }
       ]
     }
